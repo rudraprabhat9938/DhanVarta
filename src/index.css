@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Professional Currency Converter Design System */
+@layer base {
+  :root {
+    /* Modern Fintech Color Palette */
+    --background: 0 0% 100%;
+    --foreground: 215 25% 15%;
+    
+    /* Financial Brand Colors */
+    --primary: 215 85% 35%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 215 85% 55%;
+    
+    --secondary: 160 75% 35%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --accent: 260 85% 45%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Professional UI Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+    --card-border: 215 15% 92%;
+    
+    --muted: 215 15% 97%;
+    --muted-foreground: 215 15% 45%;
+    
+    --border: 215 15% 90%;
+    --input: 215 15% 95%;
+    --input-border: 215 15% 85%;
+    --ring: 215 85% 35%;
+    
+    /* Status Colors */
+    --success: 160 75% 35%;
+    --success-foreground: 0 0% 100%;
+    --warning: 45 85% 55%;
+    --warning-foreground: 215 25% 15%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Professional Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(160 75% 45%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(280 85% 55%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 50%, hsl(var(--secondary)) 100%);
+    --gradient-subtle: linear-gradient(145deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+    
+    /* Professional Shadows */
+    --shadow-soft: 0 2px 8px -2px hsl(215 25% 15% / 0.08);
+    --shadow-medium: 0 4px 16px -4px hsl(215 25% 15% / 0.12);
+    --shadow-large: 0 8px 32px -8px hsl(215 25% 15% / 0.16);
+    --shadow-glow: 0 0 24px hsl(var(--primary) / 0.15);
+    
+    /* Layout & Spacing */
+    --radius: 0.75rem;
+    --radius-sm: 0.5rem;
+    --radius-lg: 1rem;
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    :root {
+      --radius: 0.5rem;
+      --radius-lg: 0.75rem;
+    }
+  }
+
+  /* Dark Mode */
+  .dark {
+    /* Dark Mode Fintech Colors */
+    --background: 215 25% 8%;
+    --foreground: 0 0% 95%;
+    
+    --primary: 215 85% 55%;
+    --primary-foreground: 215 25% 8%;
+    --primary-glow: 215 85% 65%;
+    
+    --secondary: 160 75% 45%;
+    --secondary-foreground: 215 25% 8%;
+    
+    --accent: 260 85% 55%;
+    --accent-foreground: 215 25% 8%;
+    
+    --card: 215 25% 10%;
+    --card-foreground: 0 0% 95%;
+    --card-border: 215 15% 20%;
+    
+    --muted: 215 15% 12%;
+    --muted-foreground: 215 15% 65%;
+    
+    --border: 215 15% 18%;
+    --input: 215 15% 12%;
+    --input-border: 215 15% 25%;
+    --ring: 215 85% 55%;
+    
+    --success: 160 75% 45%;
+    --success-foreground: 215 25% 8%;
+    --warning: 45 85% 65%;
+    --warning-foreground: 215 25% 8%;
+    --destructive: 0 75% 65%;
+    --destructive-foreground: 215 25% 8%;
+    
+    /* Dark Mode Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(160 75% 55%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(280 85% 65%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 50%, hsl(var(--secondary)) 100%);
+    --gradient-subtle: linear-gradient(145deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+    
+    /* Dark Mode Shadows */
+    --shadow-soft: 0 2px 8px -2px hsl(0 0% 0% / 0.2);
+    --shadow-medium: 0 4px 16px -4px hsl(0 0% 0% / 0.3);
+    --shadow-large: 0 8px 32px -8px hsl(0 0% 0% / 0.4);
+    --shadow-glow: 0 0 24px hsl(var(--primary) / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+
+  /* Improved button interactions */
+  button {
+    @apply touch-manipulation;
+  }
+
+  /* Better mobile tap targets */
+  @media (max-width: 768px) {
+    button, a {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}

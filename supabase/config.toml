@@ -1,0 +1,10 @@
+project_id = "jzpwstqwsmkwdpqahcpx"
+
+[functions.ai-predictions]
+verify_jwt = false
+
+[functions.what-if-scenarios]
+verify_jwt = false
+
+[functions.ai-avatar]
+verify_jwt = false
